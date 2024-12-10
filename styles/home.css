@@ -1,0 +1,176 @@
+:root {
+    --background: #000000;
+    --card: #18181d;
+    --text: #b0bac5;
+    --text-tags: #788491;
+    --text-button: #000000;
+    --primary: #eee661;
+    --hprimary: #efe97a;
+    --secondary: ;
+    --hsecondary: ;
+}
+
+@media (prefers-color-scheme: light) {
+    :root {
+        --background: #efe3e8;
+        --card: #fbeff4;
+        --text: #05121f;
+        --text-tags: #38414b;
+        --text-button: #ffffff;
+        --primary: #eee661;
+        --hprimary: #efe97a;
+        --secondary: ;
+        --hsecondary: ;
+    }
+}
+
+body {
+    background-color: var(--background);
+    margin:0px;
+}
+header {
+    padding: 4px;
+    width: 100%;
+}
+.header {
+    padding: 4px;
+    width: 100%;
+}
+h1 {
+    font-family: verdana;
+    text-align: left;
+}
+h2 {
+    font-family: verdana;
+    text-align: center;
+}
+p {
+    font-family: verdana;
+    font-size: 20px;
+    padding: 16px 24px;
+}
+
+.background {
+    color: var(--text);
+    background-color: var(--background);
+}
+.card {
+    color: var(--text);
+    background-color: var(--card);
+    border-radius: 5px;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    margin:20px;
+}
+.content {
+    color: var(--text);
+    background-color: var(--card);
+    border-radius: 5px;
+}
+.columns {
+    display: grid;
+    grid-template-columns: 15% 70% 15%;
+}
+.split {
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.split3 {
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    margin:0px;
+    box-sizing: border-box;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.primary {
+    background-color: var(--primary);
+    border: 2px solid;    
+    border-color: var(--primary);
+}
+img {
+    border-radius: 5px;
+}
+.button:link, .button:visited {
+    color:var(--text-button);
+    background-color: #eee661;
+    width:100%;
+    box-sizing: border-box;
+    padding: 5px 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    border: 2px solid #eee661;
+    border-radius: 5px;
+}
+
+.button:hover, .button:active {
+    background-color: #efe97a;
+    border: 2px solid #efe97a;
+}
+a:link, a:visited {
+    color:var(--text);
+    text-decoration: none;
+}
+a:hover, a:active {
+
+} 
+.spacer {
+    height: 40px
+}
+.disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+/* DROPDOWN MENUS */
+.dropbtn {
+    background-color: var(--card);
+    color: var(--text);
+    padding: 10px 10px;
+    font-size: 16px;
+    border: 2px solid;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* The container <div> - needed to position the dropdown content */
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Dropdown Content (Hidden by Default) */
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    right: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    border: 2px solid;
+    border-radius: 5px;
+    z-index: 1;
+  }
+  
+  /* Links inside the dropdown */
+  .dropdown-content button {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  /* Change color of dropdown links on hover */
+  .dropdown-content a:hover {background-color: #f1f1f1}
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+  
+  /* Change the background color of the dropdown button when the dropdown content is shown */
+  .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+  }
