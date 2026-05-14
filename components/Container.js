@@ -1,6 +1,6 @@
 function Container({ title, children }) {
   return (
-    <div className="container" style={{ width: "fit-content" }}>
+    <div className="container">
       <div className="container-header">
         <span>{title.left}</span>
         <span>{title.right}</span>
