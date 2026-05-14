@@ -23,20 +23,20 @@
 @font-face {
   font-family: "Maple Mono";
   src:
-    local("Maple Mono NF CN Italic"),
-    local("Maple Mono NF Italic"),
-    local("Maple Mono Italic"),
-    local("MapleMono Italic"),
+    local("Maple Mono NF CN Bold"),
+    local("Maple Mono NF Bold"),
+    local("Maple Mono Bold"),
+    local("MapleMono Bold"),
     url("/assets/fonts/MapleMono-Bold.ttf.woff2") format("woff2");
     font-weight: bold;
 }
 @font-face {
   font-family: "Maple Mono";
   src:
-    local("Maple Mono NF CN Italic"),
-    local("Maple Mono NF Italic"),
-    local("Maple Mono Italic"),
-    local("MapleMono Italic"),
+    local("Maple Mono NF Bold Italic"),
+    local("Maple Mono NF CN Bold Italic"),
+    local("Maple Mono Bold Italic"),
+    local("MapleMono Bold Italic"),
     url("/assets/fonts/MapleMono-Bold-Italic.ttf.woff2") format("woff2");
     font-style: italic;
     font-weight: bold;

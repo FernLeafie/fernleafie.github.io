@@ -1,14 +1,15 @@
-@import url("styles/palette.css");
+@import url("palette.css");
 
 :root {
-    --text: var(--ctp-latte-text);
-    --success: var(--ctp-latte-green);
-    --warning: var(--ctp-latte-yellow);
-    --danger: var(--ctp-latte-red);
-    --accent-color: var(--ctp-latte-mauve);
-    --background2: var(--ctp-latte-base);
-    --background1: var(--ctp-latte-mantle);
-    --background0: var(--ctp-latte-crust);
+  --text: var(--ctp-latte-text);
+  --success: var(--ctp-latte-green);
+  --warning: var(--ctp-latte-yellow);
+  --danger: var(--ctp-latte-red);
+  --accent-color: var(--ctp-latte-mauve);
+  --border: var(--ctp-latte-surface0);
+  --background2: var(--ctp-latte-base);
+  --background1: var(--ctp-latte-mantle);
+  --background0: var(--ctp-latte-crust);
 }
 
 @media (prefers-color-scheme: dark) {
