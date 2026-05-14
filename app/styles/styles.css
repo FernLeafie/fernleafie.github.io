@@ -34,6 +34,8 @@ body {
 
 .button {
   margin: 5px;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
 .button:hover {
@@ -47,9 +49,26 @@ body {
   border-bottom: 1px solid var(--border);
 }
 
+.page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+.page-content {
+  width: 85rem;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+}
+
 .container {
+  border-radius: 5px;
   border: 1px solid var(--border);
-  border-radius: 2px;
+  overflow: hidden;
+  margin: 20px;
   width: fit-content;
   height: fit-content;
 }
@@ -69,4 +88,12 @@ body {
 .icon {
   display: inline;
   padding: 10px;
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
 }
