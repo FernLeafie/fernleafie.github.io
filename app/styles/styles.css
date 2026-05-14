@@ -53,9 +53,18 @@ body {
 }
 
 .container-header {
+  background-color: var(--background1);
   padding: 10px;
   border-bottom: 1px solid var(--border);
+  display: flex;
+  justify-content: space-between;
 }
 .container-content {
+  background-color: var(--background2);
+  padding: 10px;
+}
+
+.icon {
+  display: inline;
   padding: 10px;
 }
