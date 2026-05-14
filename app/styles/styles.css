@@ -60,8 +60,11 @@ body {
 }
 
 .row {
+  margin: 20px;
   display: flex;
   flex-direction: row;
+  column-gap: 20px;
+  row-gap: 20px;
 }
 
 .container {
@@ -73,6 +76,10 @@ body {
   height: fit-content;
 }
 
+.row > .container {
+  margin: 0px;
+}
+
 .container-header {
   background-color: var(--background1);
   padding: 10px;
@@ -80,7 +87,7 @@ body {
   display: flex;
   justify-content: space-between;
 }
-.container-content {
+.container-content > * {
   background-color: var(--background2);
   padding: 10px;
 }
