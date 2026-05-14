@@ -1,0 +1,31 @@
+@import url("styles/palette.css");
+
+:root {
+    --text: var(--ctp-latte-text);
+    --success: var(--ctp-latte-green);
+    --warning: var(--ctp-latte-yellow);
+    --danger: var(--ctp-latte-red);
+    --accent-color: var(--ctp-latte-mauve);
+    --background2: var(--ctp-latte-base);
+    --background1: var(--ctp-latte-mantle);
+    --background0: var(--ctp-latte-crust);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --text: var(--ctp-mocha-text);
+    --success: var(--ctp-mocha-green);
+    --warning: var(--ctp-mocha-yellow);
+    --danger: var(--ctp-mocha-red);
+    --accent-color: var(--ctp-mocha-mauve);
+    --background2: var(--ctp-mocha-base);
+    --background1: var(--ctp-mocha-mantle);
+    --background0: var(--ctp-mocha-crust);
+  }
+}
+
+body {
+  background: var(--background0);
+  color: var(--foreground);
+  font-family: "Maple Mono", sans-serif;
+}
