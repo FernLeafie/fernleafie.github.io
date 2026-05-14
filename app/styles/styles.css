@@ -19,6 +19,7 @@
     --warning: var(--ctp-mocha-yellow);
     --danger: var(--ctp-mocha-red);
     --accent-color: var(--ctp-mocha-mauve);
+    --border: var(--ctp-mocha-surface0);
     --background2: var(--ctp-mocha-base);
     --background1: var(--ctp-mocha-mantle);
     --background0: var(--ctp-mocha-crust);
@@ -27,6 +28,20 @@
 
 body {
   background: var(--background0);
-  color: var(--foreground);
+  color: var(--text);
   font-family: "Maple Mono", sans-serif;
+}
+
+.button {
+  margin: 5px;
+}
+
+.button:hover {
+  font-weight: bold;
+}
+
+.header {
+  padding: 10px;
+  background-color: var(--background1);
+  border-bottom: 1px solid var(--border);
 }
