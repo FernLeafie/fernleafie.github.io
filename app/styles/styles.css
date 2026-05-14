@@ -42,6 +42,20 @@ body {
 
 .header {
   padding: 10px;
+  margin-bottom: 10px;
   background-color: var(--background1);
   border-bottom: 1px solid var(--border);
+}
+
+.container {
+  border: 1px solid var(--border);
+  border-radius: 2px;
+}
+
+.container-header {
+  padding: 10px;
+  border-bottom: 1px solid var(--border);
+}
+.container-content {
+  padding: 10px;
 }
