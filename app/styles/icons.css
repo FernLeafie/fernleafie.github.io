@@ -2,7 +2,7 @@
   margin: 5px;
   padding: 0px !important;
   height: 16px;
-  color: var(--text);
+  /* color: var(--text); */
 }
 .container-header > span > .icon:first-child {
   margin-left: 0px;
@@ -13,6 +13,7 @@
 
 
 .logo {
+  margin: 5px;
   padding: 0px !important;
   height: 24px;
   color: var(--text);

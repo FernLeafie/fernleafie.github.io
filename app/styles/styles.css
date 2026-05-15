@@ -69,8 +69,11 @@ body {
   /* align-items: center; */
   column-gap: 20px;
   row-gap: 20px;
-  justify-content: flex-start;
 }
+.row-center {
+  justify-content: space-evenly;
+}
+
 @media (min-width: 768px) {
   .row {
     flex-direction: row;
