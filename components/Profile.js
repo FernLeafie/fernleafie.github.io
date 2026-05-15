@@ -1,4 +1,5 @@
 import Container from "@/components/Container";
+import Icon from "@/components/Icon";
 import Image from "next/image";
 
 function Profile({ name, image }) {
@@ -8,7 +9,8 @@ function Profile({ name, image }) {
         left: (
           <span style={{ fontStyle: "italic" }}>
             {" "}
-            <Image className="icon"
+            <Image
+              className="icon"
               src={"/assets/icons/person-16.svg"}
               alt="Fern's profile picture"
               width={16}
@@ -26,6 +28,10 @@ function Profile({ name, image }) {
         width={300}
         height={300}
       />
+      <div className="links">
+        <Icon icon="bluesky"/>
+        <Icon icon="anilist"/>
+      </div>
     </Container>
   );
 }
