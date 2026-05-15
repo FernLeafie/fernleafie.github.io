@@ -35,6 +35,7 @@ function Profile({ name, image }) {
         <Link type="github" link="https://github.com/FernLeafie"/>
         <Link type="anilist" link="https://anilist.co/user/fernleafie/"/>
         <Link type="hardcover" link="https://hardcover.app/@fernleafie"/>
+        <Link type="pronounscc" link="https://pronouns.cc/@fernleafie"/>
       </div>
     </Container>
   );
