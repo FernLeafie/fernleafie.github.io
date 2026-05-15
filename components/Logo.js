@@ -1,9 +1,9 @@
-function Icon({ icon }) {
-  switch (icon) {
+function Logo({ logo }) {
+  switch (logo) {
     case "anilist":
       return (
         <svg
-          className={"icon " + icon}
+          className={"logo " + logo}
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -18,7 +18,7 @@ function Icon({ icon }) {
     case "bluesky":
       return (
         <svg
-          className={"icon " + icon}
+          className={"logo " + logo}
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -33,7 +33,7 @@ function Icon({ icon }) {
     case "codeberg":
       return (
         <svg
-          className={"icon " + icon}
+          className={"logo " + logo}
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -48,7 +48,7 @@ function Icon({ icon }) {
     case "discord":
       return (
         <svg
-          className={"icon " + icon}
+          className={"logo " + logo}
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -63,7 +63,7 @@ function Icon({ icon }) {
     case "forgejo":
       return (
         <svg
-          className={"icon " + icon}
+          className={"logo " + logo}
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -78,7 +78,7 @@ function Icon({ icon }) {
     case "github":
       return (
         <svg
-          className={"icon " + icon}
+          className={"logo " + logo}
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -93,7 +93,7 @@ function Icon({ icon }) {
     case "hardcover":
       return (
         <svg
-          className={"icon " + icon}
+          className={"logo " + logo}
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +108,7 @@ function Icon({ icon }) {
     case "modrinth":
       return (
         <svg
-          className={"icon " + icon}
+          className={"logo " + logo}
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -123,7 +123,7 @@ function Icon({ icon }) {
     case "pronounscc":
       return (
         <svg
-          className={"icon " + icon}
+          className={"logo " + logo}
           role="img"
           viewBox="0 0 24 24"
           xmlns="http://www.w3.org/2000/svg"
@@ -139,4 +139,4 @@ function Icon({ icon }) {
       return <p>missing</p>;
   }
 }
-export default Icon;
+export default Logo;

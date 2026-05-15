@@ -1,9 +1,9 @@
-import Icon from "@/components/Icon";
+import Logo from "@/components/Logo";
 
 function Link({ link, type }) {
   return (
     <a href={link} className="link">
-      <Icon icon={type} />
+      <Logo logo={type} />
     </a>
   );
 }
