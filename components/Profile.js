@@ -1,5 +1,5 @@
 import Container from "@/components/Container";
-import Icon from "@/components/Icon";
+import Link from "@/components/Link";
 import Image from "next/image";
 
 function Profile({ name, image }) {
@@ -23,14 +23,18 @@ function Profile({ name, image }) {
       }}
     >
       <Image
+        className="profile"
         src={"/assets/profiles/" + image}
         alt="Fern's profile picture"
         width={300}
         height={300}
       />
       <div className="links">
-        <Icon icon="bluesky"/>
-        <Icon icon="anilist"/>
+        <Link type="discord" link="https://discord.com/users/582201423748399115"/>
+        <Link type="bluesky" link="https://bsky.app/profile/fernleaf.bsky.social"/>
+        <Link type="github" link="https://github.com/FernLeafie"/>
+        <Link type="anilist" link="https://anilist.co/user/fernleafie/"/>
+        <Link type="hardcover" link="https://hardcover.app/@fernleafie"/>
       </div>
     </Container>
   );

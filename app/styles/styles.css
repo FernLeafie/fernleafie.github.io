@@ -63,10 +63,15 @@ body {
 .row {
   margin: 20px;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
   align-items: center;
   column-gap: 20px;
   row-gap: 20px;
+}
+@media (min-width: 768px) {
+  .row {
+    flex-direction: row;
+  }
 }
 
 .row > .container {
@@ -78,8 +83,11 @@ body {
   border: 1px solid var(--border);
   overflow: hidden;
   margin: 20px;
-  width: fit-content;
   height: fit-content;
+  width: fit-content;
+}
+
+.row .container {
 }
 
 .container-header {
@@ -96,11 +104,20 @@ body {
 
 .links {
   border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+.link {
+  margin: 5px;
 }
 
 .icon {
   display: inline;
   padding: 10px;
+}
+.profile {
+  padding: 0px !important;
 }
 
 a {
