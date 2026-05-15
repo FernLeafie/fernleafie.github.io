@@ -3,6 +3,7 @@
 
 :root {
   --text: var(--ctp-latte-text);
+  --subtext: var(--ctp-latte-overlay2);
   --success: var(--ctp-latte-green);
   --warning: var(--ctp-latte-yellow);
   --danger: var(--ctp-latte-red);
@@ -16,6 +17,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --text: var(--ctp-mocha-text);
+    --subtext: var(--ctp-mocha-overlay2);
     --success: var(--ctp-mocha-green);
     --warning: var(--ctp-mocha-yellow);
     --danger: var(--ctp-mocha-red);
@@ -30,7 +32,7 @@
 body {
   background: var(--background0);
   color: var(--text);
-  font-family: "Maple Mono", sans-serif;
+  font-family: "Maple Mono", monospace;
 }
 
 .button {
@@ -87,6 +89,9 @@ body {
   height: fit-content;
   width: fit-content;
 }
+a .container {
+  margin: 0px;
+}
 
 .row .container {
 }
@@ -113,7 +118,6 @@ body {
   flex-wrap: wrap;
 }
 .link {
-  margin: 5px;
 }
 
 .icon {
@@ -123,9 +127,17 @@ body {
 .profile {
   padding: 0px !important;
 }
+.info {
+  color: var(--subtext);
+}
+.info .icon {
+  margin-left: 15px;
+} 
 
 a {
   text-decoration: none;
+  /* display: block; */
+  color: var(--accent-color);
 }
 
 a:hover {

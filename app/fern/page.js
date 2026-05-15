@@ -44,29 +44,48 @@ function Home() {
             />
             <Container
               title={{
-                left: <span> aboutme.txt</span>,
+                left: (
+                  <>
+                    <Icon icon="file" />
+                    <span>aboutme.typ</span>
+                    <span className="info">
+                      <Icon icon="file" />
+                      <span>Typst</span>
+                      <Icon icon="storage" />
+                      <span>4 KiB</span>
+                    </span>
+                  </>
+                ),
                 right: <Icon icon="close" />,
               }}
             >
+              <p>= Fern</p>
+              <p>A nerdy lesbian girl</p>
               <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam
-                eget odio nunc. Praesent nec mi ultricies, ornare ex quis,
-                finibus mauris. Ut eget ante vitae felis ornare venenatis sit
-                amet finibus tortor. Aliquam a bibendum nunc. Ut tempus ante ac
-                turpis rutrum semper. Nulla a rhoncus tellus. Proin viverra nisi
-                sit amet elementum vulputate. Proin eget mi at leo luctus
-                ornare. Vestibulum ante ipsum primis in faucibus orci luctus et
-                ultrices posuere cubilia curae; Curabitur orci neque, hendrerit
-                eget ligula eu, interdum placerat justo. Etiam vel libero at
-                nisl auctor ullamcorper. Pellentesque sollicitudin euismod ex, a
-                pellentesque risus placerat a. Phasellus volutpat et lorem sed
-                dignissim. Integer laoreet viverra vulputate.
+                Interested in almost anything, but mostly: <br />
+                computers, programming, gaming, manga, anime, and worldbuilding
+              </p>
+              <p>
+                Likes silly low level programming languages, with a special
+                interest for rust
               </p>
             </Container>
           </div>
           <Container
             title={{
-              left: "further useless information.md",
+              left: (
+                <>
+                  <Icon icon="file" />
+                  <span>further useless information.md</span>
+                  <span className="info">
+                    <Icon icon="file" />
+                    <span>Markdown</span>
+                    <Icon icon="storage" />
+                    <span>13 KiB</span>
+                  </span>
+                </>
+              ),
+
               right: <Icon icon="close" />,
             }}
           >
