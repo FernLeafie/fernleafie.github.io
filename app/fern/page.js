@@ -3,6 +3,7 @@ import Container from "@/components/Container";
 import Profile from "@/components/Profile";
 import Link from "@/components/Link";
 import Icon from "@/components/Icon";
+import FiletypeIcon from "@/components/FiletypeIcon";
 import Image from "next/image";
 
 function Home() {
@@ -49,7 +50,7 @@ function Home() {
                     <Icon icon="file" />
                     <span>aboutme.typ</span>
                     <span className="info">
-                      <Icon icon="file" />
+                      <FiletypeIcon icon="typst" />
                       <span>Typst</span>
                       <Icon icon="storage" />
                       <span>4 KiB</span>
@@ -78,7 +79,7 @@ function Home() {
                   <Icon icon="file" />
                   <span>further useless information.md</span>
                   <span className="info">
-                    <Icon icon="file" />
+                    <FiletypeIcon icon="markdown" />
                     <span>Markdown</span>
                     <Icon icon="storage" />
                     <span>13 KiB</span>

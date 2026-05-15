@@ -4,6 +4,7 @@ import Profile from "@/components/Profile";
 import Link from "@/components/Link";
 import Logo from "@/components/Logo";
 import Icon from "@/components/Icon";
+import FiletypeIcon from "@/components/FiletypeIcon";
 
 export default function Home() {
   return (
@@ -80,7 +81,7 @@ export default function Home() {
                   <Icon icon="file" />
                   <span>Cute homepage pending.md</span>
                   <span className="info">
-                    <Icon icon="file" />
+                    <FiletypeIcon icon="markdown" />
                     <span>Markdown</span>
                     <Icon icon="storage" />
                     <span>0 KiB</span>
