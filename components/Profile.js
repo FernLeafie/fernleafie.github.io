@@ -3,7 +3,7 @@ import Link from "@/components/Link";
 import Icon from "@/components/Icon";
 import Image from "next/image";
 
-function Profile({ name, image }) {
+function Profile({ name, image, links }) {
   return (
     <Container
       title={{
@@ -24,18 +24,7 @@ function Profile({ name, image }) {
         height={300}
       />
       <div className="links">
-        <Link
-          type="discord"
-          link="https://discord.com/users/582201423748399115"
-        />
-        <Link
-          type="bluesky"
-          link="https://bsky.app/profile/fernleaf.bsky.social"
-        />
-        <Link type="github" link="https://github.com/FernLeafie" />
-        <Link type="anilist" link="https://anilist.co/user/fernleafie/" />
-        <Link type="hardcover" link="https://hardcover.app/@fernleafie" />
-        <Link type="pronounscc" link="https://pronouns.cc/@fernleafie" />
+        {links}
       </div>
     </Container>
   );
