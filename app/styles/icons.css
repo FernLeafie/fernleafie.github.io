@@ -4,9 +4,24 @@
   color: var(--text);
 }
 
-.bluesky:hover {
-  color: #1185FE;
-}
 .anilist:hover {
-  color: #02A9FF;
+  color: #02a9ff;
+}
+.bluesky:hover {
+  color: #1185fe;
+}
+.codeberg:hover {
+  color: #2185d0;
+}
+.discord:hover {
+  color: #5865f2;
+}
+.forgejo:hover {
+  color: #fb923c;
+}
+.hardcover:hover {
+  color: #6366f1;
+}
+.modrinth:hover {
+  color: #00af5c;
 }
