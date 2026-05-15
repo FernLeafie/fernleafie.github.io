@@ -92,10 +92,13 @@ body {
 
 .container-header {
   background-color: var(--background1);
-  padding: 10px;
+  /* padding: 10px; */
   border-bottom: 1px solid var(--border);
   display: flex;
   justify-content: space-between;
+}
+.container-header > * {
+  margin: 10px;
 }
 .container-content > * {
   background-color: var(--background2);

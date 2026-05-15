@@ -1,6 +1,7 @@
 import Header from "@/components/Header";
 import Container from "@/components/Container";
 import Profile from "@/components/Profile";
+import Icon from "@/components/Icon";
 import Image from "next/image";
 
 function Home() {
@@ -14,7 +15,7 @@ function Home() {
             <Container
               title={{
                 left: <span> aboutme.txt</span>,
-                right: "x",
+                right: <Icon icon="close" />,
               }}
             >
               <p>
@@ -36,7 +37,7 @@ function Home() {
           <Container
             title={{
               left: "further useless information.md",
-              right: "x",
+              right: <Icon icon="close" />,
             }}
           >
             <p>
@@ -84,4 +85,3 @@ function Home() {
 }
 
 export default Home;
-
