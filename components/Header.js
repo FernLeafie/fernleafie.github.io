@@ -1,8 +1,19 @@
+import Image from "next/image";
+
 function Header(props) {
   return (
-    <nav className="header">
+    <nav className="header" style={{display: "flex", alignItems: "center"}}>
       <span className="button" style={{ fontStyle: "italic" }}>
-        <a href="/">Snowleafie</a>
+        <a href="/">
+          <Image
+            style={{display: "inline", marginRight: "4px"}}
+            src="/assets/icons/icon.png"
+            alt="Snowleafie logo"
+            width={32}
+            height={32}
+          />
+          <span>Snowleafie</span>
+        </a>
       </span>
       /
       <span className="button">
