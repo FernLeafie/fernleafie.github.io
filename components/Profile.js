@@ -19,7 +19,7 @@ function Profile({ name, image, links }) {
       <Image
         className="profile"
         src={"/assets/profiles/" + image}
-        alt="Fern's profile picture"
+        alt={name + "'s profile picture"}
         width={300}
         height={300}
       />
