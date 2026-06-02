@@ -12,6 +12,8 @@
   --background2: var(--ctp-latte-base);
   --background1: var(--ctp-latte-mantle);
   --background0: var(--ctp-latte-crust);
+  --logo-yellow: var(--ctp-latte-yellow);
+  --logo-mauve: var(--ctp-latte-mauve);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -26,6 +28,8 @@
     --background2: var(--ctp-mocha-base);
     --background1: var(--ctp-mocha-mantle);
     --background0: var(--ctp-mocha-crust);
+    --logo-yellow: var(--ctp-mocha-yellow);
+    --logo-mauve: var(--ctp-mocha-mauve);
   }
 }
 
@@ -142,6 +146,24 @@ a .container {
 .info .icon {
   margin-left: 15px;
 } 
+
+.snowleafie {
+  position: relative;
+  display: inline;
+}
+.snowleafie > svg {
+  display: block;
+}
+.snowleafie-leaf {
+  color: var(--logo-yellow);
+  position: absolute;
+  /* top: 0; */
+}
+.snowleafie-flake {
+  color: var(--logo-mauve);
+  position: absolute;
+  /* top: 0; */
+}
 
 a {
   text-decoration: none;

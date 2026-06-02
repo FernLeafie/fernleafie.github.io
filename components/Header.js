@@ -1,17 +1,12 @@
+import Snowleafie from "@/components/Snowleafie";
 import Image from "next/image";
 
 function Header(props) {
   return (
     <nav className="header" style={{display: "flex", alignItems: "center"}}>
       <span className="button" style={{ fontStyle: "italic" }}>
-        <a href="/">
-          <Image
-            style={{display: "inline", marginRight: "4px"}}
-            src="/assets/icons/icon.png"
-            alt="Snowleafie logo"
-            width={32}
-            height={32}
-          />
+        <a href="/" style={{display: "flex", alignItems: "center"}}>
+          <Snowleafie size={32} style={{marginRight: "4px"}}/>
           <span>Snowleafie</span>
         </a>
       </span>
