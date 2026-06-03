@@ -1,3 +1,6 @@
+"use client";
+import ThemeSwitcher from "@/components/utils/ThemeSwitcher";
+
 function Footer(props) {
   return (
     <>
@@ -5,7 +8,10 @@ function Footer(props) {
         <p>meow</p>
         <p>prrr</p>
         <p>mrrp</p>
-        <p>nyan</p>
+        <div>
+          <p>nyan</p>
+          <ThemeSwitcher />
+        </div>
       </footer>
     </>
   );
