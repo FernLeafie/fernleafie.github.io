@@ -185,7 +185,7 @@ function ThemeSwitcher(props) {
 
   return (
     <>
-      <lable htmlFor="themeSelector">Theme</lable>
+      <label htmlFor="themeSelector">Theme</label>
       <select
         name="Change theme"
         id="themeSelector"
