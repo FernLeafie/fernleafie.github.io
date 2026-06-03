@@ -37,6 +37,10 @@ body {
   background: var(--background0);
   color: var(--text);
   font-family: "Maple Mono", monospace;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .button {
@@ -69,6 +73,15 @@ body {
 }
 .page-content {
   width: 85rem;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  margin-top: 10px;
+  background-color: var(--background1);
+  border-top: 1px solid var(--border);
 }
 
 .row {

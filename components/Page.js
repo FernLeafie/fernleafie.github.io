@@ -4,13 +4,15 @@ import Footer from "@/components/Footer";
 function Page({ children }) {
   return (
     <>
-      <Header />
-      <div className="page">
-        <div className="page-content">
-          {children}
-        </div> 
-      </div>
-      <Footer />
+      {/* <div style={{display: "flex", minHeight: "100vh", flexDirection: "column", justifyContent: "space-between"}}> */}
+        <Header />
+        <div className="page">
+          <div className="page-content">
+            {children}
+          </div> 
+        </div>
+        <Footer />
+      {/* </div> */}
     </>
   );
 }
