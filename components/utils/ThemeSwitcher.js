@@ -1,9 +1,7 @@
+"use client";
 import { useState } from "react";
 
 function ThemeSwitcher(props) {
-  const [listAccents, setListAccents] = useState("");
-  const [themeIndex, setThemeIndex] = useState(0);
-  const [accentIndex, setAccentIndex] = useState(0);
   const themes = [
     {
       id: "system",
@@ -241,6 +239,15 @@ function ThemeSwitcher(props) {
       ],
     },
   ];
+  const [themeIndex, setThemeIndex] = useState(
+    JSON.parse(localStorage.getItem("theme-index")) || 0,
+  );
+  const [accentIndex, setAccentIndex] = useState(
+    JSON.parse(localStorage.getItem("accent-index")) || 0,
+  );
+  const [listAccents, setListAccents] = useState(
+    generateAccentList(themeIndex),
+  );
 
   const listThemes = themes.map((theme, index) => (
     <option key={index} value={index}>
@@ -278,50 +285,57 @@ function ThemeSwitcher(props) {
     return completedTheme;
   }
 
-  function setTheme(event) {
-    // Figure out what index was picked
-    const index = event.target.value;
-    // Update state for accent function
-    setThemeIndex(index);
-    // Construct and apply theme
+  function setTheme(index) {
     if (themes[index].id == "system") {
       document.getElementById("themeStyle").textContent = themes[index].color;
     } else {
       document.getElementById("themeStyle").textContent = assembleTheme(index);
     }
+  }
+
+  function updateTheme(event) {
+    // Figure out what index was picked
+    const index = event.target.value;
+    // Update state for accent function
+    localStorage.setItem("theme-index", JSON.stringify(index));
+    setThemeIndex(index);
+    // Construct and apply theme
+    setTheme(index)
     // Updates accent list
-    setListAccents(
-      themes[index].accents.map((accent, index) => (
-        <option key={index} value={index}>
-          {accent.name}
-        </option>
-      )),
-    );
+    setListAccents(generateAccentList(index));
     // Apply default accent colour, and update state of selector
+    localStorage.setItem("accent-index", JSON.stringify(0));
     setAccentIndex(0);
-    if (themes[index].id == "system") {
+    setAccent(index, 0);
+  }
+
+  function generateAccentList(index) {
+    return themes[index].accents.map((accent, index) => (
+      <option key={index} value={index}>
+        {accent.name}
+      </option>
+    ));
+  }
+
+  function setAccent(theme, accent) {
+    if (themes[theme].id == "system") {
       document.getElementById("accentStyle").textContent = "";
     } else {
       document.getElementById("accentStyle").textContent =
         ":root { --accent-color: var(--" +
-        themes[index].id +
+        themes[theme].id +
         "-" +
-        themes[index].accents[0].id +
+        themes[theme].accents[accent].id +
         "); }";
     }
   }
 
-  function setAccent(event) {
+  function updateAccent(event) {
     // var accentIndex = themes[themeIndex].accents.findIndex(({ id }) => id === event.target.value);
     var index = event.target.value;
+    localStorage.setItem("accent-index", JSON.stringify(index));
     setAccentIndex(index);
-    console.log(themes[themeIndex].id);
-    document.getElementById("accentStyle").textContent =
-      ":root { --accent-color: var(--" +
-      themes[themeIndex].id +
-      "-" +
-      themes[themeIndex].accents[index].id +
-      "); }";
+    setAccent(themeIndex, index)
   }
 
   return (
@@ -350,7 +364,7 @@ function ThemeSwitcher(props) {
             id="themeSelector"
             className=""
             value={themeIndex}
-            onChange={setTheme}
+            onChange={updateTheme}
           >
             {listThemes}
           </select>
@@ -360,7 +374,7 @@ function ThemeSwitcher(props) {
             id="accentSelector"
             className=""
             value={accentIndex}
-            onChange={setAccent}
+            onChange={updateAccent}
           >
             {listAccents}
           </select>
