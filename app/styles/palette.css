@@ -161,3 +161,43 @@
   --rp-dawn-highlight-med: #dfdad9;
   --rp-dawn-highlight-high: #cecacd;
 }
+:root {
+  --ef-dark-red: #e67e80;
+  --ef-dark-orange: #E69875;
+  --ef-dark-yellow: #DBBC7F;
+  --ef-dark-green: #A7C080;
+  --ef-dark-aqua: #83C092;
+  --ef-dark-blue: #7FBBB3;
+  --ef-dark-purple: #D699B6;
+  --ef-dark-foreground: #D3C6AA;
+  --ef-dark-grey2: #9DA9A0;
+  --ef-dark-grey1: #859289;
+  --ef-dark-grey0: #7A8478;
+  --ef-dark-background5: #4F5B58;
+  --ef-dark-background4: #495156;
+  --ef-dark-background3: #414B50;
+  --ef-dark-background2: #374145;
+  --ef-dark-background1: #2E383C;
+  --ef-dark-background0: #272E33;
+  --ef-dark-background-dim: #1E2326;
+}
+:root {
+  --ef-light-red: #F85552;
+  --ef-light-orange: #F57D26;
+  --ef-light-yellow: #DFA000;
+  --ef-light-green: #8DA101;
+  --ef-light-aqua: #35A77C;
+  --ef-light-blue: #3A94C5;
+  --ef-light-purple: #DF69BA;
+  --ef-light-foreground: #5C6A72;
+  --ef-light-grey2: #829181;
+  --ef-light-grey1: #939F91;
+  --ef-light-grey0: #A6B0A0;
+  --ef-light-background5: #BEC5B2;
+  --ef-light-background4: #E8E5D5;
+  --ef-light-background3: #EDEADA;
+  --ef-light-background2: #F2EFDF;
+  --ef-light-background1: #F8F5E4;
+  --ef-light-background0: #FFFBEF;
+  --ef-light-background-dim: #F2EFDF;
+}
