@@ -243,7 +243,7 @@ function ThemeSwitcher(props) {
   ];
 
   const listThemes = themes.map((theme, index) => (
-    <option key={index} value={theme.id}>
+    <option key={index} value={index}>
       {theme.emoji} {theme.name}
     </option>
   ));
@@ -280,7 +280,7 @@ function ThemeSwitcher(props) {
 
   function setTheme(event) {
     // Figure out what index was picked
-    const index = themes.findIndex(({ id }) => id === event.target.value);
+    const index = event.target.value;
     // Update state for accent function
     setThemeIndex(index);
     // Construct and apply theme
@@ -349,6 +349,7 @@ function ThemeSwitcher(props) {
             name="Change theme"
             id="themeSelector"
             className=""
+            value={themeIndex}
             onChange={setTheme}
           >
             {listThemes}
