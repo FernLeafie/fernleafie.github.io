@@ -300,7 +300,7 @@ function ThemeSwitcher(props) {
     localStorage.setItem("theme-index", JSON.stringify(index));
     setThemeIndex(index);
     // Construct and apply theme
-    setTheme(index)
+    setTheme(index);
     // Updates accent list
     setListAccents(generateAccentList(index));
     // Apply default accent colour, and update state of selector
@@ -335,7 +335,7 @@ function ThemeSwitcher(props) {
     var index = event.target.value;
     localStorage.setItem("accent-index", JSON.stringify(index));
     setAccentIndex(index);
-    setAccent(themeIndex, index)
+    setAccent(themeIndex, index);
   }
 
   return (
