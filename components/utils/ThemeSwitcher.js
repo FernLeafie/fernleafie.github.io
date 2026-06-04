@@ -3,6 +3,7 @@ import { useState } from "react";
 function ThemeSwitcher(props) {
   const [listAccents, setListAccents] = useState("");
   const [themeIndex, setThemeIndex] = useState(0);
+  const [accentIndex, setAccentIndex] = useState(0);
   const themes = [
     {
       id: "system",
@@ -296,7 +297,8 @@ function ThemeSwitcher(props) {
         </option>
       )),
     );
-    // Apply default accent colour
+    // Apply default accent colour, and update state of selector
+    setAccentIndex(0);
     if (themes[index].id == "system") {
       document.getElementById("accentStyle").textContent = "";
     } else {
@@ -311,13 +313,14 @@ function ThemeSwitcher(props) {
 
   function setAccent(event) {
     // var accentIndex = themes[themeIndex].accents.findIndex(({ id }) => id === event.target.value);
-    var accentIndex = event.target.value;
+    var index = event.target.value;
+    setAccentIndex(index)
     console.log(themes[themeIndex].id);
     document.getElementById("accentStyle").textContent =
       ":root { --accent-color: var(--" +
       themes[themeIndex].id +
       "-" +
-      themes[themeIndex].accents[accentIndex].id +
+      themes[themeIndex].accents[index].id +
       "); }";
   }
 
@@ -340,6 +343,7 @@ function ThemeSwitcher(props) {
           name="Change accent"
           id="accentSelector"
           className=""
+          value={accentIndex}
           onChange={setAccent}
         >
           {listAccents}
