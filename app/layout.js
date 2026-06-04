@@ -12,7 +12,8 @@ export default function RootLayout({ children }) {
       className={`h-full antialiased`}
     >
       <head>
-        <style type="text/css" id="themeStyle"></style>
+        <style type="text/css" id="themeStyle" suppressHydrationWarning></style>
+        <style type="text/css" id="accentStyle" suppressHydrationWarning></style>
       </head>
       <body className="min-h-full flex flex-col">{children}</body>
     </html>

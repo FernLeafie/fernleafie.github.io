@@ -1,6 +1,16 @@
+import { useState } from "react";
+
 function ThemeSwitcher(props) {
+  const [listAccents, setListAccents] = useState("");
+  const [themeIndex, setThemeIndex] = useState(0);
   const themes = [
-    { id: "system", name: "System", emoji: "🖥️", color: "" },
+    {
+      id: "system",
+      name: "System",
+      emoji: "🖥️",
+      color: "",
+      accents: [{ name: "None", id: "" }],
+    },
     {
       id: "ctp-latte",
       name: "Latte",
@@ -19,6 +29,23 @@ function ThemeSwitcher(props) {
         yellow: "yellow",
         mauve: "mauve",
       },
+      accents: [
+        { name: "Default", id: "mauve" },
+        { name: "Rosewater", id: "rosewater" },
+        { name: "Flamingo", id: "flamingo" },
+        { name: "Pink", id: "pink" },
+        { name: "Mauve", id: "mauve" },
+        { name: "Red", id: "red" },
+        { name: "Maroon", id: "maroon" },
+        { name: "Peach", id: "peach" },
+        { name: "Yellow", id: "yellow" },
+        { name: "Green", id: "green" },
+        { name: "Teal", id: "teal" },
+        { name: "Sky", id: "sky" },
+        { name: "Sapphire", id: "sapphire" },
+        { name: "Blue", id: "blue" },
+        { name: "Lavender", id: "lavender" },
+      ],
     },
     {
       id: "ctp-frappe",
@@ -38,6 +65,23 @@ function ThemeSwitcher(props) {
         yellow: "yellow",
         mauve: "mauve",
       },
+      accents: [
+        { name: "Default", id: "mauve" },
+        { name: "Rosewater", id: "rosewater" },
+        { name: "Flamingo", id: "flamingo" },
+        { name: "Pink", id: "pink" },
+        { name: "Mauve", id: "mauve" },
+        { name: "Red", id: "red" },
+        { name: "Maroon", id: "maroon" },
+        { name: "Peach", id: "peach" },
+        { name: "Yellow", id: "yellow" },
+        { name: "Green", id: "green" },
+        { name: "Teal", id: "teal" },
+        { name: "Sky", id: "sky" },
+        { name: "Sapphire", id: "sapphire" },
+        { name: "Blue", id: "blue" },
+        { name: "Lavender", id: "lavender" },
+      ],
     },
     {
       id: "ctp-macchiato",
@@ -57,6 +101,23 @@ function ThemeSwitcher(props) {
         yellow: "yellow",
         mauve: "mauve",
       },
+      accents: [
+        { name: "Default", id: "mauve" },
+        { name: "Rosewater", id: "rosewater" },
+        { name: "Flamingo", id: "flamingo" },
+        { name: "Pink", id: "pink" },
+        { name: "Mauve", id: "mauve" },
+        { name: "Red", id: "red" },
+        { name: "Maroon", id: "maroon" },
+        { name: "Peach", id: "peach" },
+        { name: "Yellow", id: "yellow" },
+        { name: "Green", id: "green" },
+        { name: "Teal", id: "teal" },
+        { name: "Sky", id: "sky" },
+        { name: "Sapphire", id: "sapphire" },
+        { name: "Blue", id: "blue" },
+        { name: "Lavender", id: "lavender" },
+      ],
     },
     {
       id: "ctp-mocha",
@@ -76,10 +137,27 @@ function ThemeSwitcher(props) {
         yellow: "yellow",
         mauve: "mauve",
       },
+      accents: [
+        { name: "Default", id: "mauve" },
+        { name: "Rosewater", id: "rosewater" },
+        { name: "Flamingo", id: "flamingo" },
+        { name: "Pink", id: "pink" },
+        { name: "Mauve", id: "mauve" },
+        { name: "Red", id: "red" },
+        { name: "Maroon", id: "maroon" },
+        { name: "Peach", id: "peach" },
+        { name: "Yellow", id: "yellow" },
+        { name: "Green", id: "green" },
+        { name: "Teal", id: "teal" },
+        { name: "Sky", id: "sky" },
+        { name: "Sapphire", id: "sapphire" },
+        { name: "Blue", id: "blue" },
+        { name: "Lavender", id: "lavender" },
+      ],
     },
     {
       id: "rp",
-      name: "Rose Pine",
+      name: "Rosé Pine",
       emoji: "🌹",
       color: {
         text: "text",
@@ -95,10 +173,19 @@ function ThemeSwitcher(props) {
         yellow: "gold",
         mauve: "iris",
       },
+      accents: [
+        { name: "Default", id: "iris" },
+        { name: "Love", id: "love" },
+        { name: "Gold", id: "gold" },
+        { name: "Rose", id: "rose" },
+        { name: "Pine", id: "pine" },
+        { name: "Foam", id: "foam" },
+        { name: "Iris", id: "iris" },
+      ],
     },
     {
       id: "rp-moon",
-      name: "Rose Pine Moon",
+      name: "Rosé Pine Moon",
       emoji: "🌙",
       color: {
         text: "text",
@@ -114,10 +201,19 @@ function ThemeSwitcher(props) {
         yellow: "gold",
         mauve: "iris",
       },
+      accents: [
+        { name: "Default", id: "iris" },
+        { name: "Love", id: "love" },
+        { name: "Gold", id: "gold" },
+        { name: "Rose", id: "rose" },
+        { name: "Pine", id: "pine" },
+        { name: "Foam", id: "foam" },
+        { name: "Iris", id: "iris" },
+      ],
     },
     {
       id: "rp-dawn",
-      name: "Rose Pine Dawn",
+      name: "Rosé Pine Dawn",
       emoji: "🌄",
       color: {
         text: "text",
@@ -133,6 +229,15 @@ function ThemeSwitcher(props) {
         yellow: "gold",
         mauve: "iris",
       },
+      accents: [
+        { name: "Default", id: "iris" },
+        { name: "Love", id: "love" },
+        { name: "Gold", id: "gold" },
+        { name: "Rose", id: "rose" },
+        { name: "Pine", id: "pine" },
+        { name: "Foam", id: "foam" },
+        { name: "Iris", id: "iris" },
+      ],
     },
   ];
 
@@ -173,27 +278,73 @@ function ThemeSwitcher(props) {
   }
 
   function setTheme(event) {
-    var themeIndex = themes.findIndex(({ id }) => id === event.target.value);
-    if (themes[themeIndex].id == "system") {
-      document.getElementById("themeStyle").textContent =
-        themes[themeIndex].color;
+    // Figure out what index was picked
+    const index = themes.findIndex(({ id }) => id === event.target.value);
+    // Update state for accent function
+    setThemeIndex(index);
+    // Construct and apply theme
+    if (themes[index].id == "system") {
+      document.getElementById("themeStyle").textContent = themes[index].color;
     } else {
-      document.getElementById("themeStyle").textContent =
-        assembleTheme(themeIndex);
+      document.getElementById("themeStyle").textContent = assembleTheme(index);
     }
+    // Updates accent list
+    setListAccents(
+      themes[index].accents.map((accent, index) => (
+        <option key={index} value={index}>
+          {accent.name}
+        </option>
+      )),
+    );
+    // Apply default accent colour
+    if (themes[index].id == "system") {
+      document.getElementById("accentStyle").textContent = "";
+    } else {
+      document.getElementById("accentStyle").textContent =
+        ":root { --accent-color: var(--" +
+        themes[index].id +
+        "-" +
+        themes[index].accents[0].id +
+        "); }";
+    }
+  }
+
+  function setAccent(event) {
+    // var accentIndex = themes[themeIndex].accents.findIndex(({ id }) => id === event.target.value);
+    var accentIndex = event.target.value;
+    console.log(themes[themeIndex].id);
+    document.getElementById("accentStyle").textContent =
+      ":root { --accent-color: var(--" +
+      themes[themeIndex].id +
+      "-" +
+      themes[themeIndex].accents[accentIndex].id +
+      "); }";
   }
 
   return (
     <>
-      <label htmlFor="themeSelector">Theme</label>
-      <select
-        name="Change theme"
-        id="themeSelector"
-        className=""
-        onChange={setTheme}
-      >
-        {listThemes}
-      </select>
+      <label style={{ display: "block" }}>
+        Theme
+        <select
+          name="Change theme"
+          id="themeSelector"
+          className=""
+          onChange={setTheme}
+        >
+          {listThemes}
+        </select>
+      </label>
+      <label style={{ display: "block" }}>
+        Accent
+        <select
+          name="Change accent"
+          id="accentSelector"
+          className=""
+          onChange={setAccent}
+        >
+          {listAccents}
+        </select>
+      </label>
     </>
   );
 }
