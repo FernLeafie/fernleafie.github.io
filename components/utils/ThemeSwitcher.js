@@ -314,7 +314,7 @@ function ThemeSwitcher(props) {
   function setAccent(event) {
     // var accentIndex = themes[themeIndex].accents.findIndex(({ id }) => id === event.target.value);
     var index = event.target.value;
-    setAccentIndex(index)
+    setAccentIndex(index);
     console.log(themes[themeIndex].id);
     document.getElementById("accentStyle").textContent =
       ":root { --accent-color: var(--" +
@@ -326,29 +326,45 @@ function ThemeSwitcher(props) {
 
   return (
     <>
-      <label style={{ display: "block" }}>
-        Theme
-        <select
-          name="Change theme"
-          id="themeSelector"
-          className=""
-          onChange={setTheme}
+      <div style={{ display: "flex", alignItems: "stretch" }}>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "space-between",
+            paddingBottom: "2px",
+            paddingTop: "2px",
+          }}
         >
-          {listThemes}
-        </select>
-      </label>
-      <label style={{ display: "block" }}>
-        Accent
-        <select
-          name="Change accent"
-          id="accentSelector"
-          className=""
-          value={accentIndex}
-          onChange={setAccent}
-        >
-          {listAccents}
-        </select>
-      </label>
+          <label style={{ display: "block" }} htmlFor="themeSelector">
+            Theme
+          </label>
+          <label style={{ display: "block" }} htmlFor="accentSelector">
+            Accent
+          </label>
+        </div>
+        <div>
+          <select
+            style={{ display: "block" }}
+            name="Change theme"
+            id="themeSelector"
+            className=""
+            onChange={setTheme}
+          >
+            {listThemes}
+          </select>
+          <select
+            style={{ display: "block" }}
+            name="Change accent"
+            id="accentSelector"
+            className=""
+            value={accentIndex}
+            onChange={setAccent}
+          >
+            {listAccents}
+          </select>
+        </div>
+      </div>
     </>
   );
 }
