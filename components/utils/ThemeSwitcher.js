@@ -1,5 +1,6 @@
 "use client";
 import { useState } from "react";
+import { useEffect } from "react";
 
 function ThemeSwitcher(props) {
   const themes = [
@@ -250,13 +251,13 @@ function ThemeSwitcher(props) {
       },
       accents: [
         { name: "Default", id: "green" },
-        { name: "red", id: "red" },
-        { name: "orange", id: "orange" },
-        { name: "yellow", id: "yellow" },
-        { name: "green", id: "green" },
-        { name: "aqua", id: "aqua" },
-        { name: "blue", id: "blue" },
-        { name: "purple", id: "purple" },
+        { name: "Red", id: "red" },
+        { name: "Orange", id: "orange" },
+        { name: "Yellow", id: "yellow" },
+        { name: "Green", id: "green" },
+        { name: "Aqua", id: "aqua" },
+        { name: "Blue", id: "blue" },
+        { name: "Purple", id: "purple" },
       ],
     },
     {
@@ -278,13 +279,13 @@ function ThemeSwitcher(props) {
       },
       accents: [
         { name: "Default", id: "green" },
-        { name: "red", id: "red" },
-        { name: "orange", id: "orange" },
-        { name: "yellow", id: "yellow" },
-        { name: "green", id: "green" },
-        { name: "aqua", id: "aqua" },
-        { name: "blue", id: "blue" },
-        { name: "purple", id: "purple" },
+        { name: "Red", id: "red" },
+        { name: "Orange", id: "orange" },
+        { name: "Yellow", id: "yellow" },
+        { name: "Green", id: "green" },
+        { name: "Aqua", id: "aqua" },
+        { name: "Blue", id: "blue" },
+        { name: "Purple", id: "purple" },
       ],
     },
   ];
@@ -297,6 +298,12 @@ function ThemeSwitcher(props) {
   const [listAccents, setListAccents] = useState(
     generateAccentList(themeIndex),
   );
+  useEffect(() => {
+    const themeStyle = document.getElementById("themeStyle");
+    const accentStyle = document.getElementById("accentStyle");
+    setTheme(themeStyle, themeIndex);
+    setAccent(accentStyle, themeIndex, accentIndex);
+  }, []);
 
   const listThemes = themes.map((theme, index) => (
     <option key={index} value={index}>
@@ -334,11 +341,11 @@ function ThemeSwitcher(props) {
     return completedTheme;
   }
 
-  function setTheme(index) {
+  function setTheme(themeStyle, index) {
     if (themes[index].id == "system") {
-      document.getElementById("themeStyle").textContent = themes[index].color;
+      themeStyle.textContent = themes[index].color;
     } else {
-      document.getElementById("themeStyle").textContent = assembleTheme(index);
+      themeStyle.textContent = assembleTheme(index);
     }
   }
 
@@ -349,13 +356,15 @@ function ThemeSwitcher(props) {
     localStorage.setItem("theme-index", JSON.stringify(index));
     setThemeIndex(index);
     // Construct and apply theme
-    setTheme(index);
+    const themeStyle = document.getElementById("themeStyle");
+    setTheme(themeStyle, index);
     // Updates accent list
     setListAccents(generateAccentList(index));
     // Apply default accent colour, and update state of selector
     localStorage.setItem("accent-index", JSON.stringify(0));
     setAccentIndex(0);
-    setAccent(index, 0);
+    const accentStyle = document.getElementById("accentStyle");
+    setAccent(accentStyle, index, 0);
   }
 
   function generateAccentList(index) {
@@ -366,11 +375,11 @@ function ThemeSwitcher(props) {
     ));
   }
 
-  function setAccent(theme, accent) {
+  function setAccent(accentStyle, theme, accent) {
     if (themes[theme].id == "system") {
-      document.getElementById("accentStyle").textContent = "";
+      accentStyle.textContent = "";
     } else {
-      document.getElementById("accentStyle").textContent =
+      accentStyle.textContent =
         ":root { --accent-color: var(--" +
         themes[theme].id +
         "-" +
@@ -384,7 +393,8 @@ function ThemeSwitcher(props) {
     var index = event.target.value;
     localStorage.setItem("accent-index", JSON.stringify(index));
     setAccentIndex(index);
-    setAccent(themeIndex, index);
+    const accentStyle = document.getElementById("accentStyle");
+    setAccent(accentStyle, themeIndex, index);
   }
 
   return (
