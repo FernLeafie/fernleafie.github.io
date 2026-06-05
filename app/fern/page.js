@@ -58,7 +58,11 @@ function Home() {
               right: <Icon icon="close" />,
             }}
           >
-            <p>= Fern</p>
+            <h1 style={{ paddingBottom: 0 }}>= Fern</h1>
+            <p style={{ paddingTop: 0 }} className="info">
+              <span className="code">[ˈfɜːn]</span> not{" "}
+              <span className="code">[ˈfæːɳ]</span>
+            </p>
             <p>A nerdy lesbian girl</p>
             <p>
               Interested in almost anything, but mostly: <br />
@@ -90,40 +94,39 @@ function Home() {
         >
           <p>
             Lorem ipsum dolor sit amet consectetur adipiscing elit. Quisque
-            faucibus ex sapien vitae pellentesque sem placerat. In id cursus
-            mi pretium tellus duis convallis. Tempus leo eu aenean sed diam
-            urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum
-            egestas. Iaculis massa nisl malesuada lacinia integer nunc
-            posuere. Ut hendrerit semper vel class aptent taciti sociosqu. Ad
-            litora torquent per conubia nostra inceptos himenaeos. Lorem ipsum
-            dolor sit amet consectetur adipiscing elit. Quisque faucibus ex
-            sapien vitae pellentesque sem placerat. In id cursus mi pretium
+            faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi
+            pretium tellus duis convallis. Tempus leo eu aenean sed diam urna
+            tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
+            Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
+            hendrerit semper vel class aptent taciti sociosqu. Ad litora
+            torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor
+            sit amet consectetur adipiscing elit. Quisque faucibus ex sapien
+            vitae pellentesque sem placerat. In id cursus mi pretium tellus duis
+            convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar
+            vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa
+            nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel
+            class aptent taciti sociosqu. Ad litora torquent per conubia nostra
+            inceptos himenaeos. Lorem ipsum dolor sit amet consectetur
+            adipiscing elit. Quisque faucibus ex sapien vitae pellentesque sem
+            placerat. In id cursus mi pretium tellus duis convallis. Tempus leo
+            eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec
+            metus bibendum egestas. Iaculis massa nisl malesuada lacinia integer
+            nunc posuere. Ut hendrerit semper vel class aptent taciti sociosqu.
+            Ad litora torquent per conubia nostra inceptos himenaeos. Lorem
+            ipsum dolor sit amet consectetur adipiscing elit. Quisque faucibus
+            ex sapien vitae pellentesque sem placerat. In id cursus mi pretium
             tellus duis convallis. Tempus leo eu aenean sed diam urna tempor.
-            Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-            Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-            hendrerit semper vel class aptent taciti sociosqu. Ad litora
-            torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor
-            sit amet consectetur adipiscing elit. Quisque faucibus ex sapien
-            vitae pellentesque sem placerat. In id cursus mi pretium tellus
-            duis convallis. Tempus leo eu aenean sed diam urna tempor.
-            Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-            Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-            hendrerit semper vel class aptent taciti sociosqu. Ad litora
-            torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor
-            sit amet consectetur adipiscing elit. Quisque faucibus ex sapien
-            vitae pellentesque sem placerat. In id cursus mi pretium tellus
-            duis convallis. Tempus leo eu aenean sed diam urna tempor.
-            Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-            Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-            hendrerit semper vel class aptent taciti sociosqu. Ad litora
-            torquent per conubia nostra inceptos himenaeos. Lorem ipsum dolor
-            sit amet consectetur adipiscing elit. Quisque faucibus ex sapien
-            vitae pellentesque sem placerat. In id cursus mi pretium tellus
-            duis convallis. Tempus leo eu aenean sed diam urna tempor.
-            Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
-            Iaculis massa nisl malesuada lacinia integer nunc posuere. Ut
-            hendrerit semper vel class aptent taciti sociosqu. Ad litora
-            torquent per conubia nostra inceptos himenaeos.
+            Pulvinar vivamus fringilla lacus nec metus bibendum egestas. Iaculis
+            massa nisl malesuada lacinia integer nunc posuere. Ut hendrerit
+            semper vel class aptent taciti sociosqu. Ad litora torquent per
+            conubia nostra inceptos himenaeos. Lorem ipsum dolor sit amet
+            consectetur adipiscing elit. Quisque faucibus ex sapien vitae
+            pellentesque sem placerat. In id cursus mi pretium tellus duis
+            convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar
+            vivamus fringilla lacus nec metus bibendum egestas. Iaculis massa
+            nisl malesuada lacinia integer nunc posuere. Ut hendrerit semper vel
+            class aptent taciti sociosqu. Ad litora torquent per conubia nostra
+            inceptos himenaeos.
           </p>
         </Container>
       </Page>

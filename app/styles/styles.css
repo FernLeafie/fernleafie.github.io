@@ -95,6 +95,13 @@ select {
   background-color: var(--background2);
 }
 
+.code {
+  padding: 2px;
+  border: 1px solid var(--border);
+  border-radius: 5px;
+  background-color: var(--background1);
+}
+
 .row {
   margin: 20px;
   display: flex;
