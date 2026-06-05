@@ -1,7 +1,6 @@
 import Container from "@/components/Container";
 import Link from "@/components/Link";
 import Icon from "@/components/Icon";
-import Image from "next/image";
 
 function Profile({ name, image, links }) {
   return (
@@ -16,7 +15,7 @@ function Profile({ name, image, links }) {
         right: <Icon icon="close" />,
       }}
     >
-      <Image
+      <img
         className="profile"
         src={"/assets/profiles/" + image}
         alt={name + "'s profile picture"}

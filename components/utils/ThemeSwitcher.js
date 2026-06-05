@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -289,20 +290,22 @@ function ThemeSwitcher(props) {
       ],
     },
   ];
-  const [themeIndex, setThemeIndex] = useState(
-    JSON.parse(localStorage.getItem("theme-index")) || 0,
-  );
-  const [accentIndex, setAccentIndex] = useState(
-    JSON.parse(localStorage.getItem("accent-index")) || 0,
-  );
+  const [themeIndex, setThemeIndex] = useState(0);
+  const [accentIndex, setAccentIndex] = useState(0);
   const [listAccents, setListAccents] = useState(
-    generateAccentList(themeIndex),
+    // generateAccentList(themeIndex),
+    <option>Loading</option>
   );
   useEffect(() => {
+    var themeIndex = JSON.parse(localStorage.getItem("theme-index"));
+    var accentIndex = JSON.parse(localStorage.getItem("accent-index"));
+    setThemeIndex(themeIndex || 0);
+    setAccentIndex(accentIndex || 0);
     const themeStyle = document.getElementById("themeStyle");
     const accentStyle = document.getElementById("accentStyle");
     setTheme(themeStyle, themeIndex);
     setAccent(accentStyle, themeIndex, accentIndex);
+    setListAccents(generateAccentList(themeIndex));
   }, []);
 
   const listThemes = themes.map((theme, index) => (
